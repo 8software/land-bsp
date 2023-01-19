@@ -1,7 +1,7 @@
 fetch('https://api.whatexploitsare.online/status/WeAreDevs')
   .then(response => response.json())
-  .then(data => {
-    let item = data[0]; // get the first (and only) object in the data array
+  .then(wrd => {
+    let item = wrd[0]; // get the first (and only) object in the data array
     for (let name in item) {
       console.log(name);
       console.log(item[name].updated);
@@ -12,8 +12,8 @@ fetch('https://api.whatexploitsare.online/status/WeAreDevs')
 
   fetch('https://api.whatexploitsare.online/status/KRNL')
   .then(response => response.json())
-  .then(data => {
-    let item = data[0]; // get the first (and only) object in the data array
+  .then(krnl => {
+    let item = krnl[0]; // get the first (and only) object in the data array
     for (let name in item) {
       console.log(name);
       console.log(item[name].updated);
@@ -24,8 +24,8 @@ fetch('https://api.whatexploitsare.online/status/WeAreDevs')
 
   fetch('https://api.whatexploitsare.online/status/Oxygen')
   .then(response => response.json())
-  .then(data => {
-    let item = data[0]; // get the first (and only) object in the data array
+  .then(oxy => {
+    let item = oxy[0]; // get the first (and only) object in the data array
     for (let name in item) {
       console.log(name);
       console.log(item[name].updated);
