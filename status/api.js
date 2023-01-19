@@ -3,10 +3,14 @@ fetch('https://api.whatexploitsare.online/status/WeAreDevs')
   .then(wrd => {
     let item = wrd[0]; // get the first (and only) object in the data array
     for (let name in item) {
-      console.log(name);
-      console.log(item[name].updated);
-      console.log(item[name].exploit_version);
-      document.getElementById("wad").innerHTML = "Working: " + item[name].updated;
+      document.getElementById("wal").innerHTML = "Last update: " + item[name].last_update;
+      if ((item[name].updated) === true) {
+        console.log('✅ Updated');
+        document.getElementById("wad").innerHTML = "✅ WeAreDevs";
+      } else {
+        console.log('⛔️ Patched');
+        document.getElementById("wad").innerHTML = "⛔️ WeAreDevs";
+      }
     }
   });
 
@@ -15,10 +19,14 @@ fetch('https://api.whatexploitsare.online/status/WeAreDevs')
   .then(krnl => {
     let item = krnl[0]; // get the first (and only) object in the data array
     for (let name in item) {
-      console.log(name);
-      console.log(item[name].updated);
-      console.log(item[name].exploit_version);
-      document.getElementById("krnl").innerHTML = "Working: " + item[name].updated;
+      document.getElementById("krl").innerHTML = "Last update: " + item[name].last_update;
+      if ((item[name].updated) === true) {
+        console.log('✅ Updated');
+        document.getElementById("krnl").innerHTML = "✅ KRNL";
+      } else {
+        console.log('⛔️ Patched');
+        document.getElementById("krnl").innerHTML = "⛔️ KRNL";
+      }
     }
   });
 
@@ -27,9 +35,13 @@ fetch('https://api.whatexploitsare.online/status/WeAreDevs')
   .then(oxy => {
     let item = oxy[0]; // get the first (and only) object in the data array
     for (let name in item) {
-      console.log(name);
-      console.log(item[name].updated);
-      console.log(item[name].exploit_version);
-      document.getElementById("oxy").innerHTML = "Working: " + item[name].updated;
+      document.getElementById("oxl").innerHTML = "Last update: " + item[name].last_update;
+      if ((item[name].updated) === true) {
+        console.log('✅ Updated');
+        document.getElementById("oxy").innerHTML = "✅ Oxygen U";
+      } else {
+        console.log('⛔️ Patched');
+        document.getElementById("oxy").innerHTML = "⛔️ Oxygen U";
+      }
     }
   });
