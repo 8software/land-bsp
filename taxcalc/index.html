@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <title>TaxCalc</title>
+    <meta charset="UTF-8">
+    <meta content="5char usernames generator" name="description">
+    <meta content="" name="keywords">
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" as="style" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="preload" as="style" href="css/v.css">
+    <link rel="stylesheet" href="css/v.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,500' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-8 offset-xl-2">
+                <form style="margin-top: 50%; transform: translateY(-50%);" role="form">
+                    <div class="messages"></div>
+                    <center>
+                    <h3>TaxCalc</h3>
+                    <div class="controls">
+                        <div class="form-group" style="width:300px;">
+                        	Item price<input id="bt" size="35" type="number" class="form-control" name="uIn1" value="">
+                            You receive<input readonly id="at" size="35" type="text" class="form-control" name="uIn1" value="">
+                        </div>
+                        <a onclick="calc()" class="btn btn-primary my-2" style="color:white;">Calc tax</a>
+                        <a onclick="calci()" class="btn btn-primary my-2" style="color:white;">In-game tax</a>
+                        <p class="text-muted">
+                            <small>
+                                note: You get less on in-game purchases like Pls Donate.<br>TaxCalc by
+                                <a class="text-decoration-none" href="https://baseplate.win" target="_blank">baseplate.</a>
+                            </small>
+                        </p>
+                    </div>
+                </center>
+                </form>
+            </div>
+            <!-- /.8 -->
+        </div>
+        <!-- /.row-->
+    </div>
+    <!-- /.container-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+<script type="text/javascript">
+function calc() {
+let input = document.getElementById("bt").value
+document.getElementById('at').value = Math.floor(0.7 * input)
+}
+</script>
+<script type="text/javascript">
+function calci() {
+let input = document.getElementById("bt").value
+document.getElementById('at').value = Math.floor(0.6 * input) + " (Pls Donate)"
+}
+</script>
+
+</html>
